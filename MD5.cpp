@@ -21,22 +21,22 @@
 
 #define ZEN_SWAP_UINT64(x) (x)
 
-inline LONG F(LONG x,LONG y,LONG z) // 0 <= t <= 19
+inline LONG F(LONG x,LONG y,LONG z)
 {
     
     return (x&y) |((~x)&z);
 }
 
-inline LONG G(LONG x,LONG y,LONG z)//20 <= t <= 39
+inline LONG G(LONG x,LONG y,LONG z)
 {
     return (x&z) |(y&(~z));
 }
 
-inline LONG H(LONG x,LONG y,LONG z)//20 <= t <= 39
+inline LONG H(LONG x,LONG y,LONG z)
 {
     return x^y^z;
 }
-inline LONG I(LONG x,LONG y,LONG z)//40 <= t <= 59
+inline LONG I(LONG x,LONG y,LONG z)
 {
     return y^(x|(~z));
 }
